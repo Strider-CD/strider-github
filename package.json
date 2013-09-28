@@ -31,6 +31,7 @@
     "jshint": "~2.1.11"
   },
   "dependencies": {
-    "passport": "~0.1.17"
+    "passport": "~0.1.17",
+    "superagent": "~0.15.4"
   }
 }
