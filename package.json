@@ -28,7 +28,9 @@
     "inline_icon": "github"
   },
   "devDependencies": {
-    "jshint": "~2.1.11"
+    "jshint": "~2.1.11",
+    "expect.js": "~0.2.0",
+    "mocha": "~1.13.0"
   },
   "dependencies": {
     "passport": "~0.1.17",
