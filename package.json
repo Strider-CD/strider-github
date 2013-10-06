@@ -23,7 +23,9 @@
     "type": "provider",
     "hosted": true,
     "config": true,
-    "accountConfig": true,
+    "accountConfig": {
+      "setupLink": "/ext/github/oauth"
+    },
     "webapp": "lib/webapp.js",
     "worker": "lib/worker.js",
     "inline_icon": "github"
