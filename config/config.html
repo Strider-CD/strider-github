@@ -1,0 +1,53 @@
+<div class="row-fluid">
+  <div class="span6">
+    <h4>Webhooks</h4>
+  <p>
+    Webhooks are the means by which github notifies strider of new commits and pull requests to your repository.
+  </p>
+  <p>We already registered the requisite webhooks when you added this
+    project, but if you want to remove them or add them back, you can do
+    so here.</p>
+  <button class="btn btn-warning" ng-click="deleteWebhooks()">Delete Webhooks</button>
+  <button class="btn" ng-click="addWebhooks()">Add Webhooks</button>
+  </div>
+  <div class="span6">
+    <h4>Pull Requests</h4>
+    <p>If you have the webhooks installed, you can also choose to test pull requests.</p>
+    <div class="btn-group">
+      <div class="btn" ng-model="config.pull_requests" btn-radio="'all'">All</div>
+      <div class="btn" ng-model="config.pull_requests" btn-radio="'whitelist'">Whitelist</div>
+      <div class="btn" ng-model="config.pull_requests" btn-radio="'none'">None</div>
+    </div>
+    <table class="table whitelist-list" ng-show="config.pull_requests === 'whitelist'">
+      <thead>
+        <tr>
+          <th>Github Username</th>
+          <th>Rights</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in config.whitelist">
+          <td>[[ user.name ]]</td>
+          <td>[[ user.level ]]</td>
+          <td><div class="close" ng-click="removeWL(user)">&times;</div></td>
+        </tr>
+        <tr>
+          <td>
+            <input ng-model="new_username">
+          </td>
+          <td>
+            <select ng-model="new_level">
+              <option value="tester">Tester</option>
+              <option value="admin">Admin</option>
+            </select>
+          </td>
+          <td>
+            <button class="btn btn-success" ng-click="addWL({name: new_username, level: new_level})">Add</button>
+          </td>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
