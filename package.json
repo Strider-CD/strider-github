@@ -22,7 +22,9 @@
     "title": "Github",
     "type": "provider",
     "hosted": true,
-    "config": true,
+    "config": {
+      "controller": "GithubCtrl"
+    },
     "accountConfig": {
       "setupLink": "/ext/github/oauth"
     },
