@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "passport": "~0.1.17",
+    "passport-github" : "~0.15",
     "superagent": "~0.15.4",
     "strider-git": "git+https://github.com/Strider-CD/strider-git.git",
     "request": "~2.27.0",
