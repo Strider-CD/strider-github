@@ -15,7 +15,7 @@
     <p>If you have the webhooks installed, you can also choose to test pull requests.</p>
     <div class="btn-group">
       <div class="btn" ng-model="config.pull_requests" btn-radio="'all'">All</div>
-      <div class="btn" ng-model="config.pull_requests" btn-radio="'whitelist'">Whitelist</div>
+      <!--div class="btn" ng-model="config.pull_requests" btn-radio="'whitelist'">Whitelist</div-->
       <div class="btn" ng-model="config.pull_requests" btn-radio="'none'">None</div>
     </div>
     <table class="table whitelist-list" ng-show="config.pull_requests === 'whitelist'">

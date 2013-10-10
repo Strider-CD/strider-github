@@ -2,38 +2,63 @@
 app.controller('GithubCtrl', ['$scope', function ($scope) {
 
   $scope.config = $scope.providerConfig();
-  $scope.config.new_username = "";
-  $scope.config.new_level = "tester";
+  $scope.new_username = "";
+  $scope.new_level = "tester";
   $scope.config.whitelist = $scope.config.whitelist || [];
   $scope.config.pull_requests = $scope.config.pull_requests || 'none';
 
+  $scope.$watch('config.pull_requests', function (value, old) {
+    if (!old || value === old) return;
+    $scope.providerConfig({
+      pull_requests: $scope.config.pull_requests
+    });
+  });
+
   $scope.addWebhooks = function () {
-    setTimeout(function () {
-      $scope.error('add webhooks not implemented', true);
-    }, 0);
+    $.ajax($scope.api_root + 'github/hook', {
+      type: 'POST',
+      success: function () {
+        $scope.success('Set github webhooks', true);
+      },
+      error: function () {
+        $scope.error('Failed to set github webhooks', true);
+      }
+    });
   };
 
   $scope.deleteWebhooks = function () {
-    setTimeout(function () {
-      $scope.error('remove webhooks not implemented', true);
-    }, 0);
+    $.ajax($scope.api_root + 'github/hook', {
+      type: 'DELETE',
+      success: function () {
+        $scope.success('Removed github webhooks', true);
+      },
+      error: function () {
+        $scope.error('Failed to remove github webhooks', true);
+      }
+    });
   };
 
   $scope.removeWL = function (user) {
     var idx = $scope.config.whitelist.indexOf(user);
     if (idx === -1) return console.error("tried to remove a whitelist item that didn't exist");
-    $scope.config.whitelist.splice(idx, 1);
-    setTimeout(function () {
-      $scope.error('save whitelist not implemented', true);
-    }, 0);
+    var whitelist = $scope.config.whitelist.slice();
+    whitelist.splice(idx, 1);
+    $scope.providerConfig({
+      whitelist: whitelist
+    }, function () {
+      $scope.config.whitelist = whitelist;
+    });
   };
 
   $scope.addWL = function (user) {
     if (!user.name || !user.level) return;
-    $scope.config.whitelist.push(user);
-    setTimeout(function () {
-      $scope.error('save whitelist not implemented', true);
-    }, 0);
+    var whitelist = $scope.config.whitelist.slice();
+    whitelist.push(user);
+    $scope.providerConfig({
+      whitelist: whitelist
+    }, function () {
+      $scope.config.whitelist = whitelist;
+    });
   };
 
 }]);
