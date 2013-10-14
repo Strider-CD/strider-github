@@ -1,26 +1,28 @@
 <div class="row-fluid">
-  <label class="checkbox">
-    <input ng-model="config.cache" type="checkbox" ng-click="save()"> Cache the project data between runs
-  </label>
   <div class="span6">
-    <h4>Webhooks</h4>
-  <p>
-    Webhooks are the means by which github notifies strider of new commits and pull requests to your repository.
-  </p>
-  <p>We already registered the requisite webhooks when you added this
-    project, but if you want to remove them or add them back, you can do
-    so here.</p>
-  <button class="btn btn-warning" ng-click="deleteWebhooks()">Delete Webhooks</button>
-  <button class="btn" ng-click="addWebhooks()">Add Webhooks</button>
-  </div>
-  <div class="span6">
+    <div>
+      <h4>Caching</h4>
+      <label class="checkbox">
+        <input ng-model="config.cache" type="checkbox" ng-click="save()"> Cache the project data between runs
+      </label>
+    </div>
     <h4>Pull Requests</h4>
-    <p>If you have the webhooks installed, you can also choose to test pull requests.</p>
+    <p>If you have the service hooks installed, you can also choose to test pull requests.</p>
     <div class="btn-group">
       <div class="btn" ng-model="config.pull_requests" btn-radio="'all'">All</div>
       <!--div class="btn" ng-model="config.pull_requests" btn-radio="'whitelist'">Whitelist</div-->
       <div class="btn" ng-model="config.pull_requests" btn-radio="'none'">None</div>
     </div>
+    <p>
+      If your project is public, and your runner is insecure (such as
+      the default runner), selecting <strong>All</strong> is potentially
+      dangerous. A malicious pull request could take down your server,
+      compromise data, etc.
+      <!-- // whitelist not yet fully implemented
+      Either choose <strong>Whitelist</strong>, or -->
+      If you want to test pull-requests, use a secure runner, such
+      as <strong>docker-runner</strong>.
+    </p>
     <table class="table whitelist-list" ng-show="config.pull_requests === 'whitelist'">
       <thead>
         <tr>
@@ -50,6 +52,17 @@
           </td>
       </tbody>
     </table>
+  </div>
+  <div class="span6">
+    <h4>Service Hooks</h4>
+    <p>
+      Service Hooks are the means by which github notifies strider of new commits and pull requests to your repository.
+    </p>
+    <p>We already registered the requisite hooks when you added this
+      project, but if you want to remove them or add them back, you can do
+      so here.</p>
+    <button class="btn btn-warning" ng-click="deleteWebhooks()">Delete Service Hooks</button>
+    <button class="btn" ng-click="addWebhooks()">Add Service Hooks</button>
   </div>
 </div>
 
