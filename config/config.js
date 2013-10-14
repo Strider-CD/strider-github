@@ -7,6 +7,10 @@ app.controller('GithubCtrl', ['$scope', function ($scope) {
   $scope.config.whitelist = $scope.config.whitelist || [];
   $scope.config.pull_requests = $scope.config.pull_requests || 'none';
 
+  $scope.save = function () {
+    $scope.providerConfig($scope.config, function () {});
+  };
+
   $scope.$watch('config.pull_requests', function (value, old) {
     if (!old || value === old) return;
     $scope.providerConfig({
