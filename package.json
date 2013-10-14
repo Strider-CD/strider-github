@@ -26,7 +26,7 @@
       "controller": "GithubCtrl"
     },
     "accountConfig": {
-      "setupLink": "/ext/github/oauth"
+      "setupLink": "/auth/github"
     },
     "webapp": "lib/webapp.js",
     "worker": "lib/worker.js",
