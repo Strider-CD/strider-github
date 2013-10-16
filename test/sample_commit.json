@@ -1,0 +1,130 @@
+{
+    "ref": "refs/heads/master",
+    "after": "5440158e185393ddedcabcbc615f574d10134cdb",
+    "before": "adbf016e0788825268ed28b3e620fa665ce285a8",
+    "created": false,
+    "deleted": false,
+    "forced": false,
+    "compare": "https://github.com/jaredly/django-colorfield/compare/adbf016e0788...5440158e1853",
+    "commits": [
+        {
+            "id": "0992306e0d53bfc45637f79674d67a7fc510b287",
+            "distinct": true,
+            "message": "Merge pull request #1 from django-stars/master\n\nBacis setup.py to allow usage with pip",
+            "timestamp": "2013-09-18T10:44:31-07:00",
+            "url": "https://github.com/jaredly/django-colorfield/commit/0992306e0d53bfc45637f79674d67a7fc510b287",
+            "author": {
+                "name": "Jared Forsyth",
+                "email": "jared@jaredforsyth.com",
+                "username": "jaredly"
+            },
+            "committer": {
+                "name": "Jared Forsyth",
+                "email": "jared@jaredforsyth.com",
+                "username": "jaredly"
+            },
+            "added": [
+                "setup.py"
+            ],
+            "removed": [],
+            "modified": []
+        },
+        {
+            "id": "b16f59a697ee3dd27eb043781186cdbb6c4b0a72",
+            "distinct": true,
+            "message": "adding manifest, updating setup.py",
+            "timestamp": "2013-09-18T10:51:12-07:00",
+            "url": "https://github.com/jaredly/django-colorfield/commit/b16f59a697ee3dd27eb043781186cdbb6c4b0a72",
+            "author": {
+                "name": "Jared Forsyth",
+                "email": "jared@jaredforsyth.com",
+                "username": "jaredly"
+            },
+            "committer": {
+                "name": "Jared Forsyth",
+                "email": "jared@jaredforsyth.com",
+                "username": "jaredly"
+            },
+            "added": [
+                ".gitignore",
+                "MANIFEST.in"
+            ],
+            "removed": [],
+            "modified": [
+                "setup.py"
+            ]
+        },
+        {
+            "id": "5440158e185393ddedcabcbc615f574d10134cdb",
+            "distinct": true,
+            "message": "adding mit license",
+            "timestamp": "2013-10-05T17:09:00-07:00",
+            "url": "https://github.com/jaredly/django-colorfield/commit/5440158e185393ddedcabcbc615f574d10134cdb",
+            "author": {
+                "name": "Jared Forsyth",
+                "email": "jared@jaredforsyth.com",
+                "username": "jaredly"
+            },
+            "committer": {
+                "name": "Jared Forsyth",
+                "email": "jared@jaredforsyth.com",
+                "username": "jaredly"
+            },
+            "added": [
+                "LICENSE"
+            ],
+            "removed": [],
+            "modified": []
+        }
+    ],
+    "head_commit": {
+        "id": "5440158e185393ddedcabcbc615f574d10134cdb",
+        "distinct": true,
+        "message": "adding mit license",
+        "timestamp": "2013-10-05T17:09:00-07:00",
+        "url": "https://github.com/jaredly/django-colorfield/commit/5440158e185393ddedcabcbc615f574d10134cdb",
+        "author": {
+            "name": "Jared Forsyth",
+            "email": "jared@jaredforsyth.com",
+            "username": "jaredly"
+        },
+        "committer": {
+            "name": "Jared Forsyth",
+            "email": "jared@jaredforsyth.com",
+            "username": "jaredly"
+        },
+        "added": [
+            "LICENSE"
+        ],
+        "removed": [],
+        "modified": []
+    },
+    "repository": {
+        "id": 645063,
+        "name": "django-colorfield",
+        "url": "https://github.com/jaredly/django-colorfield",
+        "description": "a small app providing a colorpicker field for django",
+        "homepage": "http://jaredforsyth.com/projects/django-colorfield",
+        "watchers": 8,
+        "stargazers": 8,
+        "forks": 12,
+        "fork": false,
+        "size": 122,
+        "owner": {
+            "name": "jaredly",
+            "email": "jabapyth@gmail.com"
+        },
+        "private": false,
+        "open_issues": 0,
+        "has_issues": true,
+        "has_downloads": true,
+        "has_wiki": true,
+        "language": "JavaScript",
+        "created_at": 1272917979,
+        "pushed_at": 1381018140,
+        "master_branch": "master"
+    },
+    "pusher": {
+        "name": "none"
+    }
+}
