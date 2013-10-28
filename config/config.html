@@ -65,5 +65,34 @@
     <button class="btn" ng-click="addWebhooks()">Add Service Hooks</button>
   </div>
 </div>
+<div class="btn-group">
+  <button class="btn" btn-radio="'https'" ng-click="saveAuth()" ng-model="config.auth.type">OAuth</button>
+  <button class="btn" btn-radio="'ssh'" ng-model="config.auth.type">SSH</button>
+</div>
+<div class="auth" ng-switch="config.auth.type">
+  <p ng-switch-when="https">
+    By default, your repository
+    is <a href="https://help.github.com/articles/git-over-https-using-oauth-token">fetched
+    using the OAuth token</a> obtained when you authenticated strider
+    with your github account.
+  </p>
+  <div ng-switch-when="ssh">
+    <h4>Ssh Keys</h4>
+    <span class="help-text">
+      Leave these blank to use the project's private and public keys
+      (you can find those under the "General" tab).
+    </span>
+    <div class="row-fluid">
+      <div class="span6">
+        <label>Private Key</label>
+        <textarea ng-model="config.auth.privkey"></textarea>
+      </div>
+      <div class="span6">
+        <label>Public Key</label>
+        <textarea ng-model="config.auth.pubkey"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
 
 
