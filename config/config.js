@@ -19,24 +19,30 @@ app.controller('GithubCtrl', ['$scope', function ($scope) {
   });
 
   $scope.addWebhooks = function () {
+    $scope.loadingWebhooks = true;
     $.ajax($scope.api_root + 'github/hook', {
       type: 'POST',
       success: function () {
+        $scope.loadingWebhooks = false;
         $scope.success('Set github webhooks', true);
       },
       error: function () {
+        $scope.loadingWebhooks = false;
         $scope.error('Failed to set github webhooks', true);
       }
     });
   };
 
   $scope.deleteWebhooks = function () {
+    $scope.loadingWebhooks = true;
     $.ajax($scope.api_root + 'github/hook', {
       type: 'DELETE',
       success: function () {
+        $scope.loadingWebhooks = false;
         $scope.success('Removed github webhooks', true);
       },
       error: function () {
+        $scope.loadingWebhooks = false;
         $scope.error('Failed to remove github webhooks', true);
       }
     });

@@ -61,8 +61,9 @@
     <p>We already registered the requisite hooks when you added this
       project, but if you want to remove them or add them back, you can do
       so here.</p>
-    <button class="btn btn-warning" ng-click="deleteWebhooks()">Delete Service Hooks</button>
-    <button class="btn" ng-click="addWebhooks()">Add Service Hooks</button>
+    <button class="btn btn-warning" ng-click="deleteWebhooks()" ng-disabled="loadingWebhooks">Delete Service Hooks</button>
+    <button class="btn" ng-click="addWebhooks()" ng-disabled="loadingWebhooks">Add Service Hooks</button>
+    <i class="icon-spin icon-refresh" ng-show="loadingWebhooks"></i>
   </div>
 </div>
 
