@@ -1,6 +1,6 @@
 {
   "name": "strider-github",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A basic git provider for strider",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Strider-CD/strider-git-provider.git"
+    "url": "https://github.com/Strider-CD/strider-github.git"
   },
   "keywords": [
     "git",
