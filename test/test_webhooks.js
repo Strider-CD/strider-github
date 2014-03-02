@@ -20,6 +20,8 @@ describe('webhooks', function () {
           trigger: {
             type: 'commit',
             author: {
+              name: 'Jared Forsyth',
+              username: 'jaredly',
               email: 'jared@jaredforsyth.com'
             },
             url: 'https://github.com/jaredly/django-colorfield/commit/5440158e185393ddedcabcbc615f574d10134cdb',
@@ -59,7 +61,7 @@ describe('webhooks', function () {
           trigger: {
             type: 'pull-request',
             author: {
-              user: 'jaredly',
+              username: 'jaredly',
               image: 'https://0.gravatar.com/avatar/313878fc8f316fc3fe4443b13913d0a4?d=https%3A%2F%2Fidenticons.github.com%2Fb12c483d8922cb5945bd4ffdae6d591d.png'
             },
             url: 'https://github.com/jaredly/petulant-wookie/pull/1',
