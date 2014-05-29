@@ -20,6 +20,8 @@ describe('webhooks', function () {
           trigger: {
             type: 'commit',
             author: {
+              name: 'Jared Forsyth',
+              username: 'jaredly',
               email: 'jared@jaredforsyth.com'
             },
             url: 'https://github.com/jaredly/django-colorfield/commit/5440158e185393ddedcabcbc615f574d10134cdb',
@@ -59,7 +61,7 @@ describe('webhooks', function () {
           trigger: {
             type: 'pull-request',
             author: {
-              user: 'jaredly',
+              username: 'jaredly',
               image: 'https://0.gravatar.com/avatar/313878fc8f316fc3fe4443b13913d0a4?d=https%3A%2F%2Fidenticons.github.com%2Fb12c483d8922cb5945bd4ffdae6d591d.png'
             },
             url: 'https://github.com/jaredly/petulant-wookie/pull/1',
@@ -74,4 +76,23 @@ describe('webhooks', function () {
       })
     })
   })
+  
+  describe('verifySignature', function () {
+    // `X-Hub-Signature` request header value from a github test hook request
+    var goodSig = 'sha1=0a09a56a74e9e68928a35f712afaae72b010c11f'
+      , secret = 'testsecret123'
+      , body = 'payload=%7B%22zen%22%3A%22Avoid+administrative+distraction.%22%2C%22hook_id%22%3A1881347%7D'
+    it('should verify valid signature', function (done) {
+      var valid = lib.verifySignature(goodSig, secret, body)
+      expect(valid).to.be(true)
+      done()
+    })
+    it('should not verify invalid signature', function (done) {
+      var badSig = goodSig.replace(/.{1}$/, 'a')
+      var valid = lib.verifySignature(badSig, secret, body)
+      expect(valid).to.be(false)
+      done()
+    })
+  })
+  
 })
