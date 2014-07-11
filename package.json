@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "passport": "~0.1.17",
-    "passport-github": "~0.1.5",
+    "passport-github": "jaredhanson/passport-github",
     "superagent": "~0.15.4",
     "strider-git": "~0.2.0",
     "request": "~2.27.0",
