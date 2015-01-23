@@ -10,10 +10,23 @@ your projects. It registers webhooks and sets up ssh keys (if you so choose).
 
 If you are running on `localhost:3000` the default settings should work just fine.
 
-### Custom hostname
+### Use custom hostname and port
 
-if you are *not* using localhost:3000 as your hostname:
+To use a custom hostname and port:
 
-- you need to register your own github app, with the authentication URL set to your server's hostname + `/auth/github/callback`, e.g. 'https://strider.example.com/auth/github/callback'. This can be done [here](https://github.com/settings/applications/new).
-- set the env variables `PLUGIN_GITHUB_APP_ID` and `PLUGIN_GITHUB_APP_SECRET` to those of your app
-- you need to set the ENV variable `PLUGIN_GITHUB_HOSTNAME` to your server's hostname (including `http://` or `https://`)
+- set this environment variables with you hosname/port information
+
+```
+PORT=9999
+SERVER_NAME="http://your.strider.hostname:9999"
+PLUGIN_GITHUB_APP_ID="hereComesTheId"
+PLUGIN_GITHUB_APP_SECRET="theSecretFromGithub"
+```
+
+- register your own github app [here](https://github.com/settings/applications/new) and set authentication URL your server's hostname:port + `/auth/github/callback`, for example:
+
+```
+http://your.strider.hostname:9999/auth/github/callback
+```
+
+- also make sure your github profile has a public email set
