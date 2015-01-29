@@ -5,7 +5,7 @@ var expect = require('expect.js')
 describe('github api', function () {
   describe('getFile', function () {
     it('should get a file', function (done) {
-      api.getFile('Readme.md', null, null, 'Strider-CD', 'strider-github', function (err, text) {
+      api.getFile('README.md', null, null, 'Strider-CD', 'strider-github', function (err, text) {
         expect(err).to.not.be.ok()
         expect(text).to.be.ok()
         done()
@@ -20,7 +20,7 @@ describe('github api', function () {
       })
     })
   })
-  
+
   describe('createHooks', function () {
     it('should fail on bad credentials', function (done) {
       api.createHooks('github/github-services', 'http://example.com/hook', 'testsecret', 'invalidtoken', function (err) {
@@ -28,12 +28,12 @@ describe('github api', function () {
         done()
       })
     })
-    
+
     // if test environment hasn't been set-up with test values then
     // just make mocha report them as pending, rather than fail
     var env = process.env
       , t = env.TEST_HOOK_REPONAME ? 'it' : 'xit'
-      
+
     global[t]('should create a hook', function (done) {
       api.createHooks(env.TEST_HOOK_REPONAME, env.TEST_HOOK_URL, 'testsecret123', env.TEST_HOOK_TOKEN, function (err) {
         expect(err).to.equal(null)
@@ -41,5 +41,5 @@ describe('github api', function () {
       })
     })
   })
-  
+
 })
