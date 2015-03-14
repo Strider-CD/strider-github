@@ -4,7 +4,8 @@ strider-github
 A provider for strider that integrates with github to provide easy setup of
 your projects. It registers webhooks and sets up ssh keys (if you so choose).
 
-[![NPM](https://nodei.co/npm/strider-github.png)](https://nodei.co/npm/strider-github/)
+[![NPM](https://nodei.co/npm/strider-github.png)](https://nodei.co/npm/strider-github/)  
+[![Build Status](https://travis-ci.org/Strider-CD/strider-github.svg)](https://travis-ci.org/Strider-CD/strider-github)
 
 ## Required Configuration
 
