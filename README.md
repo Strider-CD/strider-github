@@ -30,3 +30,4 @@ http://your.strider.hostname:9999/auth/github/callback
 ```
 
 - also make sure your github profile has a public email set
+  * Go to https://github.com/settings/profile and select an email under "Public email".
