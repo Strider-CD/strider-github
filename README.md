@@ -7,6 +7,8 @@ your projects. It registers webhooks and sets up ssh keys (if you so choose).
 [![NPM](https://nodei.co/npm/strider-github.png)](https://nodei.co/npm/strider-github/)  
 [![Build Status](https://travis-ci.org/Strider-CD/strider-github.svg)](https://travis-ci.org/Strider-CD/strider-github)
 
+Note: Supports using '[skip ci]' in your commit message to skip commits triggering a job.
+
 ## Required Configuration
 
 If you are running on `localhost:3000` the default settings should work just fine.
