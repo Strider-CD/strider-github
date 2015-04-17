@@ -1,6 +1,6 @@
 {
   "name": "strider-github",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "description": "A github & github enterprise provider for strider",
   "main": "lib/index.js",
   "scripts": {
