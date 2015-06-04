@@ -2,8 +2,8 @@
 app.controller('GithubCtrl', ['$scope', function ($scope) {
 
   $scope.config = $scope.providerConfig();
-  $scope.new_username = "";
-  $scope.new_level = "tester";
+  $scope.new_username = '';
+  $scope.new_level = 'tester';
   $scope.config.whitelist = $scope.config.whitelist || [];
   $scope.config.pull_requests = $scope.config.pull_requests || 'none';
 
@@ -50,7 +50,7 @@ app.controller('GithubCtrl', ['$scope', function ($scope) {
 
   $scope.removeWL = function (user) {
     var idx = $scope.config.whitelist.indexOf(user);
-    if (idx === -1) return console.error("tried to remove a whitelist item that didn't exist");
+    if (idx === -1) return console.error('tried to remove a whitelist item that didn\'t exist');
     var whitelist = $scope.config.whitelist.slice();
     whitelist.splice(idx, 1);
     $scope.providerConfig({
