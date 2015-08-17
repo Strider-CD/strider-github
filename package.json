@@ -35,9 +35,10 @@
     "inline_icon": "github"
   },
   "devDependencies": {
-    "jshint": "~2.1.11",
     "expect.js": "~0.2.0",
-    "mocha": "~1.13.0"
+    "jshint": "~2.1.11",
+    "mocha": "~1.13.0",
+    "nock": "^2.10.0"
   },
   "dependencies": {
     "async": "~0.2.9",
