@@ -1,6 +1,6 @@
 
 var expect = require('expect.js')
-  , api = require('../lib/api')
+  , api = require('../lib/api');
 
 describe('github api', function () {
   describe('getFile', function () {
