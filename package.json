@@ -47,7 +47,7 @@
     "gravatar": "~1.0.6",
     "lodash": "^2.2.1",
     "passport": "~0.1.17",
-    "passport-github": "jaredhanson/passport-github",
+    "passport-github": "^1.0.0",
     "scmp": "0.0.2",
     "ssh-keypair": "~1.0.0",
     "step": "0.0.5",
