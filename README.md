@@ -60,3 +60,5 @@ of the following are set. On GitHub Enterprise, log in to the profile you are tr
 
 - Make sure your github profile has a public email set
   * Go to https://github.com/settings/profile and select an email under "Public email".
+- Make sure you have admin rights on the projects before adding them,
+since strider will need to create webhooks for the integration to work.
