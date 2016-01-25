@@ -29,22 +29,24 @@ The following variables only need to be overridden if you are using github enter
 
 ### Enterprise Setup
 
-1) You'll need to create an Application on your GitHub Enterprise Server. Log in to GitHub Enterprise and navigate to
+1. You'll need to create an Application on your GitHub Enterprise Server. Log in to GitHub Enterprise and navigate to
 `https://your-github-url.com/settings/applications/new` and set authentication URL to
 `https://your-strider-server:port/auth/github/callback`.
-2) Define the environment variables. Here is an example:
-   ```
+2. Define the environment variables. Here is an example:
+
+   ```shell
    export SERVER_NAME="http://111.11.11.111:3000"
    export PLUGIN_GITHUB_APP_ID="a342d32c23c23"
    export PLUGIN_GITHUB_APP_SECRET="5af64a67af586847afbc6796769769d97a961"
    export PLUGIN_GITHUB_API_DOMAIN="https://github.my-organization.com"
    export PLUGIN_GITHUB_API_ENDPOINT="https://github.my-organization.com/api/v3"
    ```
+   
    **NOTE** `SERVER_NAME` must be the same exact host that you used for the 'Authentication URL' in step 1. For example,
    if you used `http://111.11.11.111:3000/auth/guthub/callback` in step 1, your `SERVER_NAME` **must** be
    `http://111.11.11.111:3000`. Also note that the protocol must be the same between the two (if you used `http://`
    in step 1, you must use `http://` in `SERVER_NAME` and not `https://`).
-3) Reboot strider and navigate link a github account as normal, you should see your enterprise repos!
+3. Reboot strider and navigate link a github account as normal, you should see your enterprise repos!
 
 #### Known Issues with Enterprise
 
