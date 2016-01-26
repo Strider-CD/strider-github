@@ -4,7 +4,7 @@ strider-github
 A provider for strider that integrates with github to provide easy setup of
 your projects. It registers webhooks and sets up ssh keys (if you so choose).
 
-[![NPM](https://nodei.co/npm/strider-github.png)](https://nodei.co/npm/strider-github/)
+[![NPM][npm-badge-img]][npm-badge-link]
 [![Build Status](https://travis-ci.org/Strider-CD/strider-github.svg)](https://travis-ci.org/Strider-CD/strider-github)
 
 Note: Supports using '[skip ci]' in your commit message to skip commits triggering a job.
@@ -62,3 +62,6 @@ of the following are set. On GitHub Enterprise, log in to the profile you are tr
   * Go to https://github.com/settings/profile and select an email under "Public email".
 - Make sure you have admin rights on the projects before adding them,
 since strider will need to create webhooks for the integration to work.
+
+[npm-badge-img]: https://badge.fury.io/js/strider-github.svg
+[npm-badge-link]: http://badge.fury.io/js/strider-github
