@@ -40,8 +40,9 @@ describe('webhooks', function () {
   describe('pull request hook', function () {
     describe('parsing', function () {
       it('should work', function () {
-        var fx = require('./sample_pull_request.json')
-          , config = lib.pullRequestJob(fx.pull_request, fx.action)
+        var fx = require('./sample_pull_request.json');
+        var config = lib.pullRequestJob(fx.pull_request, fx.action);
+
         expect(config).to.eql({
           branch: 'master',
           deploy: false,
@@ -51,7 +52,8 @@ describe('webhooks', function () {
                 user: 'jaredly',
                 repo: 'petulant-wookie',
                 sha: 'f65ac3101a45bb9408c0459805b496cb73ae2d5f',
-                number: 1
+                number: 1,
+                body: 'This is the body.'
               }
             }
           },
