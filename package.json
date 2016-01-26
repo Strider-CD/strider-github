@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run lint && npm run tests",
     "lint": "jshint --verbose lib/",
-    "tests": "mocha -R spec test/"
+    "tests": "mocha --timeout 5000 -R spec test/"
   },
   "repository": {
     "type": "git",
