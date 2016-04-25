@@ -75,7 +75,7 @@ describe('github api', function () {
                 { url: 'git://github.com/stridertester/proj1.git',
                   owner: 'stridertester',
                   repo: 'proj1',
-                  auth: { type: 'https' } } },
+                  auth: { type: 'ssh' } } },
            {  id: 40900394,
               name: 'stridertestersunion/union-proj-1',
               display_name: 'stridertestersunion/union-proj-1',
@@ -85,7 +85,7 @@ describe('github api', function () {
                 { url: 'git://github.com/stridertestersunion/union-proj-1.git',
                   owner: 'stridertestersunion',
                   repo: 'union-proj-1',
-                  auth: { type: 'https' } } }
+                  auth: { type: 'ssh' } } }
           ]
         );
         ///console.log(util.inspect(repos, false, 10, true));
