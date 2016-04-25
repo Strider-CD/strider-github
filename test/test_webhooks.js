@@ -10,6 +10,7 @@ describe('webhooks', function () {
           , config = lib.pushJob(fx)
 
         delete config.trigger.author.image
+
         expect(config).to.eql({
           branch: 'master',
           deploy: true,
@@ -58,7 +59,8 @@ describe('webhooks', function () {
             }
           },
           ref: {
-            fetch: 'refs/pull/1/merge'
+            fetch: 'refs/pull/1/merge',
+            branch: 'master'
           },
           trigger: {
             type: 'pull-request',
@@ -78,7 +80,7 @@ describe('webhooks', function () {
       })
     })
   })
-  
+
   describe('verifySignature', function () {
     // `X-Hub-Signature` request header value from a github test hook request
     var goodSig = 'sha1=0a09a56a74e9e68928a35f712afaae72b010c11f'
@@ -96,5 +98,5 @@ describe('webhooks', function () {
       done()
     })
   })
-  
+
 })
