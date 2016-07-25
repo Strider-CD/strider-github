@@ -1,11 +1,11 @@
 {
   "name": "strider-github",
   "version": "2.3.1",
-  "description": "A github & github enterprise provider for strider",
+  "description": "A GibHub & GitHub Enterprise provider for Strider",
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run lint && npm run tests",
-    "lint": "jshint --verbose lib/",
+    "lint": "eslint lib",
     "tests": "mocha --timeout 5000 -R spec test/"
   },
   "repository": {
@@ -16,9 +16,12 @@
     "git",
     "strider"
   ],
+  "engines": {
+    "node": ">=4.2"
+  },
   "author": "Jared Forsyth <jared@jaredforsyth.com>",
   "license": "MIT",
-  "readmeFilename": "Readme.md",
+  "readmeFilename": "README.md",
   "strider": {
     "id": "github",
     "title": "Github",
@@ -35,18 +38,16 @@
     "inline_icon": "github"
   },
   "devDependencies": {
+    "eslint": "^3.1.1",
     "expect.js": "~0.2.0",
-    "jshint": "~2.1.11",
     "mocha": "~1.13.0",
     "nock": "^2.10.0"
   },
   "dependencies": {
     "async": "~0.2.9",
-    "crypto": "0.0.3",
-    "debug": "~0.7.3",
+    "debug": "~2.2.0",
     "gravatar": "~1.0.6",
     "lodash": "^2.2.1",
-    "passport": "~0.1.17",
     "passport-github": "^1.0.0",
     "scmp": "0.0.2",
     "ssh-keypair": "~1.0.0",
