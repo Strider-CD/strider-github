@@ -63,5 +63,17 @@ of the following are set. On GitHub Enterprise, log in to the profile you are tr
 - Make sure you have admin rights on the projects before adding them,
 since strider will need to create webhooks for the integration to work.
 
+## Local Development
+
+Due to the fact that Github posts to the Strider app when there is an event (commit, PR, etc)
+it is very difficult to test all of the functionality when developing/fixing bugs locally.
+An alternative is to use something like [localtunnel].
+
+```sh
+$ npm install -g localtunnel
+$ lt --port <strider-port>
+```
+
 [npm-badge-img]: https://badge.fury.io/js/strider-github.svg
 [npm-badge-link]: http://badge.fury.io/js/strider-github
+[localtunnel]: https://localtunnel.github.io/www/
