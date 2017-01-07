@@ -6,6 +6,14 @@
         <input ng-model="config.cache" type="checkbox" ng-change="save()"> Cache the project data between runs
       </label>
     </div>
+
+    <div>
+      <h4>Test On Releases</h4>
+      <label class="checkbox">
+        <input ng-model="config.release" type="checkbox" ng-change="save()"> Create a job when a release is created on Github
+      </label>
+    </div>
+
     <h4>Pull Requests</h4>
     <p>If you have the service hooks installed, you can also choose to test pull requests.</p>
     <div class="btn-group">
