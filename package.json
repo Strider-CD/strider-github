@@ -38,21 +38,21 @@
     "inline_icon": "github"
   },
   "devDependencies": {
-    "eslint": "^3.1.1",
-    "expect.js": "~0.2.0",
-    "mocha": "~1.13.0",
-    "nock": "^2.10.0"
+    "eslint": "^4.6.1",
+    "expect.js": "~0.3.1",
+    "mocha": "~3.5.0",
+    "nock": "^9.0.14"
   },
   "dependencies": {
-    "async": "~0.2.9",
-    "debug": "~2.2.0",
-    "gravatar": "~1.0.6",
-    "lodash": "^2.2.1",
+    "async": "~2.5.0",
+    "debug": "~3.0.1",
+    "gravatar": "~1.6.0",
+    "lodash": "^4.17.4",
     "passport-github": "^1.1.0",
-    "scmp": "0.0.2",
-    "ssh-keypair": "~1.0.0",
-    "step": "0.0.5",
+    "scmp": "2.0.0",
+    "ssh-keypair": "~2.0.0",
+    "step": "1.0.0",
     "strider-git": "^1.0.0",
-    "superagent": "~0.15.4"
+    "superagent": "~3.6.0"
   }
 }
