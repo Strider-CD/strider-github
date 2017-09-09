@@ -1,6 +1,8 @@
 strider-github
 ==============
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Strider-CD/strider-github.svg)](https://greenkeeper.io/)
+
 A provider for strider that integrates with github to provide easy setup of
 your projects. It registers webhooks and sets up ssh keys (if you so choose).
 
