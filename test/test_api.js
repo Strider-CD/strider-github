@@ -64,7 +64,7 @@ describe('github api', function () {
       api.getRepos("35e31a04c04b09174d20de8287f2e8ddad7d2095", "stridertester", function(err, repos) {
         expect(err).to.not.be.ok();
         expect(repos).to.be.an('array');
-        expect(repos.length).to.eql(2);
+        expect(repos.length).to.eql(1);
         expect(repos).to.eql(
           [ { id: 40900282,
               name: 'stridertester/proj1',
@@ -75,7 +75,7 @@ describe('github api', function () {
                 { url: 'git://github.com/stridertester/proj1.git',
                   owner: 'stridertester',
                   repo: 'proj1',
-                  auth: { type: 'ssh' } } },
+                  auth: { type: 'ssh' } } },/*
            {  id: 40900394,
               name: 'stridertestersunion/union-proj-1',
               display_name: 'stridertestersunion/union-proj-1',
@@ -85,7 +85,7 @@ describe('github api', function () {
                 { url: 'git://github.com/stridertestersunion/union-proj-1.git',
                   owner: 'stridertestersunion',
                   repo: 'union-proj-1',
-                  auth: { type: 'ssh' } } }
+                  auth: { type: 'ssh' } } }*/
           ]
         );
         ///console.log(util.inspect(repos, false, 10, true));
