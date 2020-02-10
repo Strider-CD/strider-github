@@ -39,22 +39,22 @@
     "inline_icon": "github"
   },
   "devDependencies": {
-    "eslint": "^3.1.1",
-    "expect.js": "~0.2.0",
-    "mocha": "~1.13.0",
-    "nock": "^2.10.0",
+    "eslint": "^6.8.0",
+    "expect.js": "~0.3.1",
+    "mocha": "^7.0.1",
+    "nock": "^11.8.0",
     "standard-version": "^7.1.0"
   },
   "dependencies": {
-    "async": "~0.2.9",
-    "debug": "^2.6.9",
-    "gravatar": "^1.0.6",
+    "async": "^3.1.1",
+    "debug": "^4.1.1",
+    "gravatar": "^1.8.0",
     "lodash": "^4.17.5",
     "passport-github": "^1.1.0",
     "scmp": "0.0.2",
-    "ssh-keypair": "^1.0.0",
-    "step": "0.0.5",
+    "ssh-keypair": "^2.0.0",
+    "step": "^1.0.0",
     "strider-git": "^1.0.0",
-    "superagent": "^3.7.0"
+    "superagent": "^5.2.1"
   }
 }
