@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/Strider-CD/strider-github/compare/v2.4.1...v3.0.0) (2020-02-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* node version required is now 10
+
+### Bug Fixes
+
+* update node version to 10 ([6f970af](https://github.com/Strider-CD/strider-github/commit/6f970afe7c309f5d63f9cf1ad38eb3220d3e315a))
+
 ### [2.4.1](https://github.com/Strider-CD/strider-github/compare/v1.0.0...v2.4.1) (2020-02-10)
 
 
