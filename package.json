@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run lint && npm run tests",
     "lint": "eslint lib",
-    "tests": "mocha --timeout 5000 -R spec test/"
+    "tests": "mocha --timeout 5000 -R spec test/",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,8 @@
     "eslint": "^3.1.1",
     "expect.js": "~0.2.0",
     "mocha": "~1.13.0",
-    "nock": "^2.10.0"
+    "nock": "^2.10.0",
+    "standard-version": "^7.1.0"
   },
   "dependencies": {
     "async": "~0.2.9",
