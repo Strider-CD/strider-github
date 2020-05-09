@@ -3,36 +3,51 @@
     <div>
       <h4>Caching</h4>
       <label class="checkbox">
-        <input ng-model="config.cache" type="checkbox" ng-change="save()"> Cache the project data between runs
+        <input ng-model="config.cache" type="checkbox" ng-change="save()" />
+        Cache the project data between runs
       </label>
     </div>
 
     <div>
       <h4>Test On Releases</h4>
       <label class="checkbox">
-        <input ng-model="config.release" type="checkbox" ng-change="save()"> Create a job when a release is created on Github
+        <input ng-model="config.release" type="checkbox" ng-change="save()" />
+        Create a job when a release is created on Github
       </label>
     </div>
 
     <h4>Pull Requests</h4>
-    <p>If you have the service hooks installed, you can also choose to test pull requests.</p>
+    <p>
+      If you have the service hooks installed, you can also choose to test pull
+      requests.
+    </p>
     <div class="btn-group">
-      <div class="btn" ng-model="config.pull_requests" btn-radio="'all'">All</div>
+      <div class="btn" ng-model="config.pull_requests" btn-radio="'all'">
+        All
+      </div>
       <!--div class="btn" ng-model="config.pull_requests" btn-radio="'whitelist'">Whitelist</div-->
-      <div class="btn" ng-model="config.pull_requests" btn-radio="'none'">None</div>
+      <div class="btn" ng-model="config.pull_requests" btn-radio="'none'">
+        None
+      </div>
     </div>
     <p>
-      If your project is public, and your runner is insecure (such as
-      the default runner), selecting <strong>All</strong> is potentially
-      dangerous. A malicious pull request could take down your server,
-      compromise data, etc.
+      If your project is public, and your runner is insecure (such as the
+      default runner), selecting <strong>All</strong> is potentially dangerous.
+      A malicious pull request could take down your server, compromise data,
+      etc.
       <!-- // whitelist not yet fully implemented
       Either choose <strong>Whitelist</strong>, or -->
-      If you want to test pull-requests, use a secure runner, such
-      as <a href="https://github.com/Strider-CD/strider-docker-runner"
-        title="Link to strider-docker-runner Github repo">docker-runner</a>.
+      If you want to test pull-requests, use a secure runner, such as
+      <a
+        href="https://github.com/Strider-CD/strider-docker-runner"
+        title="Link to strider-docker-runner Github repo"
+        >docker-runner</a
+      >.
     </p>
-    <table class="table whitelist-list" ng-show="config.pull_requests === 'whitelist'">
+    <table
+      class="table whitelist-list"
+      ng-show="config.pull_requests === 'whitelist'"
+    >
       <thead>
         <tr>
           <th>Github Username</th>
@@ -48,7 +63,7 @@
         </tr>
         <tr>
           <td>
-            <input ng-model="new_username">
+            <input ng-model="new_username" />
           </td>
           <td>
             <select ng-model="new_level">
@@ -57,23 +72,37 @@
             </select>
           </td>
           <td>
-            <button class="btn btn-success" ng-click="addWL({name: new_username, level: new_level})">Add</button>
+            <button
+              class="btn btn-success"
+              ng-click="addWL({name: new_username, level: new_level})"
+            >
+              Add
+            </button>
           </td>
+        </tr>
       </tbody>
     </table>
   </div>
   <div class="span6">
     <h4>Service Hooks</h4>
     <p>
-      Service Hooks are the means by which Github notifies Strider of new commits and pull requests to your repository.
+      Service Hooks are the means by which Github notifies Strider of new
+      commits and pull requests to your repository.
     </p>
-    <p>We already registered the requisite hooks when you added this
-      project, but if you want to remove them or add them back, you can do
-      so here.</p>
-    <button class="btn btn-warning" ng-click="deleteWebhooks()" ng-disabled="loadingWebhooks">Delete Service Hooks</button>
-    <button class="btn" ng-click="addWebhooks()" ng-disabled="loadingWebhooks">Add Service Hooks</button>
+    <p>
+      We already registered the requisite hooks when you added this project, but
+      if you want to remove them or add them back, you can do so here.
+    </p>
+    <button
+      class="btn btn-warning"
+      ng-click="deleteWebhooks()"
+      ng-disabled="loadingWebhooks"
+    >
+      Delete Service Hooks
+    </button>
+    <button class="btn" ng-click="addWebhooks()" ng-disabled="loadingWebhooks">
+      Add Service Hooks
+    </button>
     <i class="icon-spin icon-refresh" ng-show="loadingWebhooks"></i>
   </div>
 </div>
-
-
