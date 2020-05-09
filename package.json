@@ -39,11 +39,11 @@
     "inline_icon": "github"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "expect.js": "~0.3.1",
     "mocha": "^7.0.1",
-    "nock": "^11.8.0",
-    "standard-version": "^7.1.0"
+    "nock": "^12.0.3",
+    "standard-version": "^8.0.0"
   },
   "dependencies": {
     "async": "^3.1.1",
