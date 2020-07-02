@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/Strider-CD/strider-github/compare/v3.0.0...v3.0.1) (2020-07-02)
+
+
+### Bug Fixes
+
+* update accesstoken on reauth ([02ee9d6](https://github.com/Strider-CD/strider-github/commit/02ee9d65804744b9930c18a47ce35cd928725fa0))
+* update deps and use yarn ([80def15](https://github.com/Strider-CD/strider-github/commit/80def1508a880290d63a0189b7044c6b7c79024f))
+
 ## [3.0.0](https://github.com/Strider-CD/strider-github/compare/v2.4.1...v3.0.0) (2020-02-10)
 
 ### ⚠ BREAKING CHANGES
