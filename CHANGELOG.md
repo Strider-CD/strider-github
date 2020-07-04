@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.4](https://github.com/Strider-CD/strider-github/compare/v3.0.3...v3.0.4) (2020-07-04)
+
+
+### Bug Fixes
+
+* update strider-git to v2 ([32b325d](https://github.com/Strider-CD/strider-github/commit/32b325d2b9866c679a837acea5e6ff29cb4d6180))
+
 ### [3.0.3](https://github.com/Strider-CD/strider-github/compare/v3.0.2...v3.0.3) (2020-07-02)
 
 
