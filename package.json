@@ -55,7 +55,7 @@
     "scmp": "0.0.2",
     "ssh-keypair": "^2.0.0",
     "step": "^1.0.0",
-    "strider-git": "^1.0.0",
+    "strider-git": "^2.0.0",
     "superagent": "^5.2.1"
   }
 }
